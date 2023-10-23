@@ -1,4 +1,4 @@
-	// copy one file into another file
+// copy one file into another file
 import java.io.*;
 class Slip13
 {
