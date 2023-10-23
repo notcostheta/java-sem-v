@@ -1,52 +1,54 @@
-import java.io.*;
-interface Shape
-{
-      final float pi=3.14f;
-      public void area();     
+package slip9;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+interface Shape {
+    float pi = 3.14f;
+
+    void area();
 }
 
-class Circle implements Shape
-{     int r;
-      Circle(int r)
-      {
-            this.r = r;
-      }
-      public void area()
-      {
-            System.out.println("Area of Circle = "+(pi*r*r));
-      }
-     
+class Circle implements Shape {
+    private int radius;
+
+    Circle(int radius) {
+        this.radius = radius;
+    }
+
+    public void area() {
+        System.out.println("Area of Circle = " + (pi * radius * radius));
+    }
 }
 
-class Sphere implements Shape
-{     int r;
-      Sphere(int r)
-      {     this.r = r;
-      }
-      public void area()
-      {     System.out.println("Area of  Sphere = "+(4*pi*r*r));
-      }
+class Sphere implements Shape {
+    private int radius;
+
+    Sphere(int radius) {
+        this.radius = radius;
+    }
+
+    public void area() {
+        System.out.println("Area of Sphere = " + (4 * pi * radius * radius));
+    }
 }
 
-class Slip9
-{    
-      public static void main(String a[]) throws IOException
-      {    
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            int r;
+public class Slip9 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int radius;
 
-            System.out.println("Enter radius for Circle =  ");
-            r =Integer.parseInt(br.readLine());
-           
-            Shape s;
-            s = new Circle(r);
-            s.area();
-           
-            System.out.println("Enter radius for sphere : ");
-            r =Integer.parseInt(br.readLine());
- 
-            s=new Sphere(r);
-            s.area();
-           
-      }
+        System.out.print("Enter radius for Circle: ");
+        radius = Integer.parseInt(br.readLine());
+
+        Shape circle = new Circle(radius);
+        circle.area();
+
+        System.out.print("Enter radius for Sphere: ");
+        radius = Integer.parseInt(br.readLine());
+
+        Shape sphere = new Sphere(radius);
+        sphere.area();
+    }
 }
