@@ -1,4 +1,3 @@
-
 class Odd extends Thread
 {
 	public void run()
