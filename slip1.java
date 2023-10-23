@@ -1,3 +1,9 @@
+/*Slip1 - Write some simple programs in java such as
+i)	To find factorial of number
+ii)	To  display first 50 prime numbers
+iii)	To find sum and average of N numbers 
+*/
+
 package slip1;
 
 import java.util.Scanner;
@@ -8,7 +14,7 @@ class Slip1 {
             int ch, i, num, n, sum, cnt, flag, fact;
             do {
                 System.out.println("1 : Find Factorial");
-                System.out.println("2 : Display First 50 numbers");
+                System.out.println("2 : Display First 50 Prime numbers");
                 System.out.println("3 : Find sum and average of N numbers");
                 System.out.println("4 : Exit");
                 System.out.print("Enter Choice = ");
